@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Currency</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Calculate Currency</h1>
+
+    <h3>USD to Baht</h3>
+
+    <input id="usd" type="number">
+
+    <button onclick="usdToBaht()">Calculate</button>
+
+    <p id="result1">Result</p>
+
+
+    <h3>Baht to USD</h3>
+
+    <input id="baht" type="number">
+
+    <button onclick="bahtToUsd()">Calculate</button>
+
+    <p id="result2">Result</p>
+
+
+    <script>
+
+        let rate = 33.2675;
+
+        function usdToBaht() {
+
+            let usd = document.getElementById("usd").value;
+
+            let baht = usd * rate;
+
+            document.getElementById("result1").innerText =
+                baht + " Baht";
+        }
+
+
+        function bahtToUsd() {
+
+            let baht = document.getElementById("baht").value;
+
+            let usd = baht / rate;
+
+            document.getElementById("result2").innerText =
+                usd + " USD";
+        }
+
+    </script>
+
+</body>
+</html>
